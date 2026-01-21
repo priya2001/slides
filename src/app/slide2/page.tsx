@@ -2,50 +2,14 @@
 
 import React from 'react';
 import Heading from '../../components/Heading';
+import BulletPoint from '../../components/BulletPoint';
+import ImageCard from '../../components/ImageCard';
 
 const Slide: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   return (
     <section className="min-h-screen bg-gradient-to-br from-gray-900 to-black p-8 md:p-16 flex flex-col lg:flex-row items-center justify-between">
       {children}
     </section>
-  );
-};
-
-
-const BulletPoint: React.FC<{ 
-  title: string; 
-  description: string;
-  className?: string;
-}> = ({ title, description, className = '' }) => {
-  return (
-    <div className={`flex items-start space-x-4 mb-6 ${className}`}>
-      <div className="flex-shrink-0 mt-1">
-        <div className="w-3 h-3 rounded-full bg-blue-500"></div>
-      </div>
-      <div>
-        <h3 className="text-lg md:text-xl font-semibold text-white mb-1">{title}</h3>
-        <p className="text-gray-400 text-sm md:text-base">{description}</p>
-      </div>
-    </div>
-  );
-};
-
-
-const ImageCard: React.FC<{ 
-  imageUrl: string;
-  alt: string;
-  className?: string;
-}> = ({ imageUrl, alt, className = '' }) => {
-  return (
-    <div className={`w-full lg:w-2/5 max-w-lg ${className}`}>
-      <div className="bg-gray-800 rounded-2xl overflow-hidden shadow-2xl shadow-blue-500/20 border border-gray-700">
-        <img 
-          src={imageUrl} 
-          alt={alt}
-          className="w-full h-80 md:h-96 object-cover"
-        />
-      </div>
-    </div>
   );
 };
 

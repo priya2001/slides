@@ -28,6 +28,22 @@ const HomePage = () => {
       route: "/slide3",
       gradient: "from-green-600 to-green-800",
       icon: ""
+    },
+    {
+      id: 4,
+      title: "Slide 4",
+      description: "Product Overview - Detailed features and capabilities of the MealMate platform",
+      route: "/slide4",
+      gradient: "from-purple-600 to-purple-800",
+      icon: ""
+    },
+    {
+      id: 5,
+      title: "Slide 5",
+      description: "Unique Value Proposition - Core differentiators and competitive advantages",
+      route: "/slide5",
+      gradient: "from-indigo-600 to-indigo-800",
+      icon: ""
     }
   ];
 
@@ -45,7 +61,7 @@ const HomePage = () => {
         </div>
 
         {/* Navigation Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-8">
           {slides.map((slide) => (
             <Link 
               key={slide.id}
