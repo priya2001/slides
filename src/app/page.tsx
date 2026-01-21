@@ -7,41 +7,41 @@ const HomePage = () => {
   const slides = [
     {
       id: 1,
-      title: "Slide 1",
-      description: "MealMate Introduction - Professional pitch deck style introduction to the service",
-      route: "/slide1",
+      title: "Welcome",
+      description: "Introduction to MealMate - Professional pitch deck style introduction to the service",
+      route: "/welcome",
       gradient: "from-blue-600 to-blue-800",
       icon: ""
     },
     {
       id: 2,
-      title: "Slide 2", 
-      description: "Problem Statement - 60/40 layout showing key pain points for urban professionals",
-      route: "/slide2",
+      title: "Problem Statement", 
+      description: "Key pain points for urban professionals",
+      route: "/problem-statement",
       gradient: "from-red-600 to-red-800",
       icon: ""
     },
     {
       id: 3,
-      title: "Slide 3",
-      description: "Solution Presentation - 2x2 grid showcasing MealMate's four solution pillars",
-      route: "/slide3",
+      title: "Solution Approach",
+      description: "MealMate's innovative solution pillars",
+      route: "/solution-approach",
       gradient: "from-green-600 to-green-800",
       icon: ""
     },
     {
       id: 4,
-      title: "Slide 4",
-      description: "Product Overview - Detailed features and capabilities of the MealMate platform",
-      route: "/slide4",
+      title: "Product Features",
+      description: "Detailed features and capabilities of the MealMate platform",
+      route: "/product-features",
       gradient: "from-purple-600 to-purple-800",
       icon: ""
     },
     {
       id: 5,
-      title: "Slide 5",
-      description: "Unique Value Proposition - Core differentiators and competitive advantages",
-      route: "/slide5",
+      title: "Value Proposition",
+      description: "Core differentiators and competitive advantages",
+      route: "/value-proposition",
       gradient: "from-indigo-600 to-indigo-800",
       icon: ""
     }
