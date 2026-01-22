@@ -1,122 +1,49 @@
 'use client';
 
-
 import Link from 'next/link';
 
 const HomePage = () => {
-  const slides = [
+  const layouts = [
     {
       id: 1,
-      title: "Welcome",
-      description: "Introduction to MealMate - Professional pitch deck style introduction to the service",
-      route: "/welcome",
-      gradient: "from-blue-600 to-blue-800",
-      icon: ""
+      title: "Layout 1",
+      description: "Summit Layout",
+      route: "/layout1",
+      gradient: "from-red-600 to-black-800",
     },
     {
       id: 2,
-      title: "Problem Statement", 
-      description: "Key pain points for urban professionals",
-      route: "/problem-statement",
-      gradient: "from-red-600 to-red-800",
-      icon: ""
-    },
-    {
-      id: 3,
-      title: "Solution Approach",
-      description: "MealMate's innovative solution pillars",
-      route: "/solution-approach",
-      gradient: "from-green-600 to-green-800",
-      icon: ""
-    },
-    {
-      id: 4,
-      title: "Product Features",
-      description: "Detailed features and capabilities of the MealMate platform",
-      route: "/product-features",
-      gradient: "from-purple-600 to-purple-800",
-      icon: ""
-    },
-    {
-      id: 5,
-      title: "Value Proposition",
-      description: "Core differentiators and competitive advantages",
-      route: "/value-proposition",
-      gradient: "from-indigo-600 to-indigo-800",
-      icon: ""
+      title: "MealMate",
+      description: "Meals for Working Professionals",
+      route: "/presentation",
+      gradient: "from-blue-600 to-black-800",
     }
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-gray-900 p-8 md:p-16">
       <div className="max-w-6xl mx-auto">
-        {/* Header */}
-        <div className="text-center mb-16">
-          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
-            MealMate Presentation
-          </h1>
-          <p className="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-            Click on any slide below to view the full presentation content
-          </p>
-        </div>
-
-        {/* Navigation Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-8">
-          {slides.map((slide) => (
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 justify-items-center">
+          {layouts.map((layout) => (
             <Link 
-              key={slide.id}
-              href={slide.route}
-              className={`group relative overflow-hidden rounded-2xl p-8 transition-all duration-300 hover:scale-105 hover:shadow-2xl cursor-pointer bg-gradient-to-br ${slide.gradient}`}
+              key={layout.id}
+              href={layout.route}
+              className={`group relative overflow-hidden rounded-xl p-6 hover:shadow-2xl cursor-pointer bg-gradient-to-br ${layout.gradient} w-full max-w-sm`}
             >
-              {/* Glow effect on hover */}
-              <div className="absolute inset-0 bg-white/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-              
-              <div className="relative z-10">
-                {/* Icon */}
-                <div className="text-5xl mb-6 text-center">{slide.icon}</div>
-                
-                {/* Title */}
-                <h2 className="text-3xl font-bold text-white mb-4 text-center">
-                  {slide.title}
+              <div className="relative z-10 text-center">
+                <h2 className="text-2xl font-bold text-white mb-3">
+                  {layout.title}
                 </h2>
-                
-                {/* Description */}
-                <p className="text-gray-100 text-center leading-relaxed mb-6">
-                  {slide.description}
+                <p className="text-gray-100 text-sm leading-relaxed mb-4">
+                  {layout.description}
                 </p>
-                
-                {/* Arrow indicator */}
-                <div className="flex justify-center">
-                  <svg 
-                    className="w-8 h-8 text-white/80 group-hover:text-white transition-colors duration-300" 
-                    fill="none" 
-                    stroke="currentColor" 
-                    viewBox="0 0 24 24"
-                  >
-                    <path 
-                      strokeLinecap="round" 
-                      strokeLinejoin="round" 
-                      strokeWidth={2} 
-                      d="M14 5l7 7m0 0l-7 7m7-7H3" 
-                    />
-                  </svg>
-                </div>
               </div>
             </Link>
           ))}
-        </div>
-
-        {/* Footer */}
-        <div className="text-center mt-16 pt-8 border-t border-gray-700">
-          <p className="text-gray-400 text-lg">
-            Built with Next.js, React, TypeScript and Tailwind CSS
-          </p>
         </div>
       </div>
     </div>
   );
 };
 
-export default function Home() {
-  return <HomePage />;
-}
+export default HomePage;

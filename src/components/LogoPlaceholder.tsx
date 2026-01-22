@@ -1,10 +1,12 @@
 import React from 'react';
 
-const LogoPlaceholder: React.FC = () => {
+interface LogoPlaceholderProps {
+  className?: string;
+}
+
+const LogoPlaceholder: React.FC<LogoPlaceholderProps> = ({ className = '' }) => {
   return (
-    <div className="absolute top-8 left-8">
-      <span className="text-blue-400 italic text-sm">Add your logo here</span>
-    </div>
+    <p className={`text-blue-500 text-sm ${className}`}>Add your logo here</p>
   );
 };
 

@@ -1,6 +1,5 @@
 'use client';
 
-import React from 'react';
 import Heading from '../../components/Heading';
 import FeatureCard from '../../components/FeatureCard';
 
@@ -19,7 +18,7 @@ interface SolutionSlideData {
 const SolutionSlide: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   return (
     <section className="min-h-screen w-full bg-gradient-to-br from-gray-900 via-black to-gray-900 p-8 md:p-16">
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-7xl mx-auto text-white">
         {children}
       </div>
     </section>
@@ -35,6 +34,8 @@ const SolutionSlideComponent: React.FC<{ data: SolutionSlideData }> = ({ data })
           title={data.heading}
           subtitle={data.description}
           size="xl"
+          titleColor="text-white"
+          subtitleColor="text-gray-300"
         />
       </div>
       
@@ -46,6 +47,9 @@ const SolutionSlideComponent: React.FC<{ data: SolutionSlideData }> = ({ data })
             subtitle={feature.subtitle}
             description={feature.description}
             gradient={feature.gradient}
+            titleColor="text-white"
+            subtitleColor="text-gray-300"
+            textColor="text-gray-200"
           />
         ))}
       </div>
