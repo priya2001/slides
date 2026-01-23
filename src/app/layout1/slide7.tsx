@@ -5,7 +5,7 @@ import Heading from '../../components/Heading';
 
 const Layout1Slide7 = () => {
   return (
-    <section className="min-h-screen flex items-center justify-center relative overflow-hidden bg-gray-50">
+    <section className="w-[1280px] h-[720px] flex items-center justify-center relative overflow-hidden bg-gray-50">
       
       <div className="absolute top-8 left-8 z-10">
         <LogoPlaceholder />
