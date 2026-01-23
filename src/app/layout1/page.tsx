@@ -13,71 +13,74 @@ import Layout1Slide9 from './slide9';
 import Layout1Slide10 from './slide10';
 import Layout1Slide11 from './slide11';
 import Layout1Slide12 from './slide12';
+import SlideWrapper from '../../components/SlideWrapper';
 
 const Layout1Page = () => {
   return (
-    <div className="overflow-x-hidden p-4 sm:p-6 md:p-8 lg:p-12 xl:p-16 bg-gray-100">
-      {/* Layout 1 - Presentation Slides */}
-      
-      {/* Slide 1 - Intro */}
-      <div className="mb-8 sm:mb-10 md:mb-12 lg:mb-14 xl:mb-16">
-        <Layout1Slide1 />
-      </div>
-      
-      {/* Slide 2 - Problem */}
-      <div className="mb-8 sm:mb-10 md:mb-12 lg:mb-14 xl:mb-16">
-        <Layout1Slide2 />
-      </div>
-      
-      {/* Slide 3 - Solution */}
-      <div className="mb-8 sm:mb-10 md:mb-12 lg:mb-14 xl:mb-16">
-        <Layout1Slide3 />
-      </div>
-      
-      {/* Slide 4 - Team */}
-      <div className="mb-8 sm:mb-10 md:mb-12 lg:mb-14 xl:mb-16">
-        <Layout1Slide4 />
-      </div>
-      
-      {/* Slide 5 - Market Opportunity */}
-      <div className="mb-8 sm:mb-10 md:mb-12 lg:mb-14 xl:mb-16">
-        <Layout1Slide5 />
-      </div>
-      
-      {/* Slide 6 - Market Sizing */}
-      <div className="mb-8 sm:mb-10 md:mb-12 lg:mb-14 xl:mb-16">
-        <Layout1Slide6 />
-      </div>
-      
-      {/* Slide 7 - Product Demo */}
-      <div className="mb-8 sm:mb-10 md:mb-12 lg:mb-14 xl:mb-16">
-        <Layout1Slide7 />
-      </div>
-      
-      {/* Slide 8 - Business Model */}
-      <div className="mb-8 sm:mb-10 md:mb-12 lg:mb-14 xl:mb-16">
-        <Layout1Slide8 />
-      </div>
-      
-      {/* Slide 9 - Traction & Growth */}
-      <div className="mb-8 sm:mb-10 md:mb-12 lg:mb-14 xl:mb-16">
-        <Layout1Slide9 />
-      </div>
-      
-      {/* Slide 10 - Competitive Analysis */}
-      <div className="mb-8 sm:mb-10 md:mb-12 lg:mb-14 xl:mb-16">
-        <Layout1Slide10 />
-      </div>
-      
-      {/* Slide 11 - Fundraising */}
-      <div className="mb-8 sm:mb-10 md:mb-12 lg:mb-14 xl:mb-16">
-        <Layout1Slide11 />
-      </div>
-      
-      {/* Slide 12 - Thank You */}
-      <div className="mb-8 sm:mb-10 md:mb-12 lg:mb-14 xl:mb-16">
-        <Layout1Slide12 />
-      </div>
+    <div className="flex justify-center items-start min-h-screen bg-gray-100 p-4 pt-8">
+      <SlideWrapper exportMode={false} allowDynamicHeight={true}>
+        {/* Layout 1 - Presentation Slides */}
+        
+        {/* Slide 1 - Intro */}
+        <div className="mb-8">
+          <Layout1Slide1 />
+        </div>
+        
+        {/* Slide 2 - Problem */}
+        <div className="mb-8">
+          <Layout1Slide2 />
+        </div>
+        
+        {/* Slide 3 - Solution */}
+        <div className="mb-8">
+          <Layout1Slide3 />
+        </div>
+        
+        {/* Slide 4 - Team */}
+        <div className="mb-8">
+          <Layout1Slide4 />
+        </div>
+        
+        {/* Slide 5 - Market Opportunity */}
+        <div className="mb-8">
+          <Layout1Slide5 />
+        </div>
+        
+        {/* Slide 6 - Market Sizing */}
+        <div className="mb-8">
+          <Layout1Slide6 />
+        </div>
+        
+        {/* Slide 7 - Product Demo */}
+        <div className="mb-8">
+          <Layout1Slide7 />
+        </div>
+        
+        {/* Slide 8 - Business Model */}
+        <div className="mb-8">
+          <Layout1Slide8 />
+        </div>
+        
+        {/* Slide 9 - Traction & Growth */}
+        <div className="mb-8">
+          <Layout1Slide9 />
+        </div>
+        
+        {/* Slide 10 - Competitive Analysis */}
+        <div className="mb-8">
+          <Layout1Slide10 />
+        </div>
+        
+        {/* Slide 11 - Fundraising */}
+        <div className="mb-8">
+          <Layout1Slide11 />
+        </div>
+        
+        {/* Slide 12 - Thank You */}
+        <div className="mb-8 pb-8">
+          <Layout1Slide12 />
+        </div>
+      </SlideWrapper>
     </div>
   );
 };

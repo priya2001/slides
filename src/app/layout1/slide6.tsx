@@ -80,7 +80,7 @@ const Layout1Slide6 = () => {
           
           
           <div className="w-full lg:w-1/2">
-            <div className="bg-white p-6 rounded-2xl shadow-sm">
+            <div className="bg-white p-6 rounded-2xl shadow-sm" style={{ height: '400px' }}>
               <ResponsiveContainer width="100%" height={400}>
                 <BarChart
                   data={chartData}

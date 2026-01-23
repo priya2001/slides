@@ -53,8 +53,8 @@ const Layout1Slide11 = () => {
         
         
         <div className="flex flex-col items-center">
-          <div className="relative w-80 h-80">
-            <ResponsiveContainer width="100%" height="100%">
+          <div className="relative w-80 h-80" style={{ width: '320px', height: '320px' }}>
+            <ResponsiveContainer width={320} height={320}>
               <PieChart margin={{ top: 30, right: 80, bottom: 30, left: 80 }}>
                 <Pie
                   data={data}
