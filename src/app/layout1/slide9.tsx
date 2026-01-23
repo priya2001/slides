@@ -1,3 +1,5 @@
+'use client';
+
 import LogoPlaceholder from '../../components/LogoPlaceholder';
 import FeatureCard from '../../components/FeatureCard';
 
@@ -36,11 +38,10 @@ const Layout1Slide9 = () => {
         <LogoPlaceholder />
       </div>
       
-      
-      <div className="w-full max-w-6xl mx-auto px-8 z-10">
+      <div className="w-full h-full px-16 pt-24 z-10">
         
-        <div className="text-center mb-12">
-          <h1 className="text-4xl md:text-5xl font-bold text-black mb-4">
+        <div className="text-left mb-12">
+          <h1 className="text-5xl font-bold text-black mb-4">
             Strong Traction & Growth
           </h1>
           <p className="text-lg text-gray-600">
@@ -48,9 +49,8 @@ const Layout1Slide9 = () => {
           </p>
         </div>
         
-      
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
-          {metrics.slice(0, 3).map((metric, index) => (
+        <div className="grid grid-cols-4 gap-6 mb-6">
+          {metrics.map((metric, index) => (
             <FeatureCard
               key={index}
               metric={metric.metric}
@@ -63,19 +63,6 @@ const Layout1Slide9 = () => {
           ))}
         </div>
         
-        
-        <div className="flex justify-center">
-          <div className="md:w-1/3">
-            <FeatureCard
-              metric={metrics[3].metric}
-              title={metrics[3].title}
-              description={metrics[3].description}
-              bgColor={metrics[3].bgColor}
-              isMetricsCard={true}
-              largePadding={true}
-            />
-          </div>
-        </div>
       </div>
     </section>
   );

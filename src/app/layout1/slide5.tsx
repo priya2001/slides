@@ -39,8 +39,7 @@ const Layout1Slide5 = () => {
         <LogoPlaceholder />
       </div>
       
-      
-      <div className="w-full max-w-6xl mx-auto px-8 z-10">
+      <div className="w-full h-full px-16 pt-24 z-10">
       
         <Heading 
           title="Massive Market Opportunity"
@@ -51,8 +50,7 @@ const Layout1Slide5 = () => {
           className="mb-12 text-left"
         />
         
-        
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6">
+        <div className="grid grid-cols-4 gap-6">
           {statCards.map((card, index) => (
             <FeatureCard
               key={index}

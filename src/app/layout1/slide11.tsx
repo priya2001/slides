@@ -1,12 +1,13 @@
 import LogoPlaceholder from '../../components/LogoPlaceholder';
 import { PieChart, Pie, Cell, ResponsiveContainer } from 'recharts';
+import BulletPoint from '../../components/BulletPoint';
 
 const Layout1Slide11 = () => {
   const data = [
-    { name: "Product Development", value: 40, color: "#3B82F6" },
-    { name: "Sales & Marketing", value: 35, color: "#10B981" },
-    { name: "Operations", value: 15, color: "#F59E0B" },
-    { name: "Working Capital", value: 10, color: "#EF4444" },
+    { name: "Product Development", value: 40, color: "text-blue-500" },
+    { name: "Sales & Marketing", value: 35, color: "text-green-500" },
+    { name: "Operations", value: 15, color: "text-yellow-500" },
+    { name: "Working Capital", value: 10, color: "text-red-500" },
   ];
 
   const renderCustomizedLabel = (props: any) => {
@@ -21,13 +22,13 @@ const Layout1Slide11 = () => {
       <text
         x={x}
         y={y}
-        fill={data[index].color}
+        fill={data[index].color.replace('text-', '').replace('-500', '')}
         textAnchor={textAnchor}
         dominantBaseline="middle"
         fontSize={14}
         fontWeight={500}
       >
-        {`${name} ${(percent * 100).toFixed(0)}%`}
+        {/* {`${name} ${(percent * 100).toFixed(0)}%`} */}
       </text>
     );
   };
@@ -52,23 +53,30 @@ const Layout1Slide11 = () => {
         </div>
         
         
-        <div className="flex flex-col items-center">
-          <div className="relative w-80 h-80" style={{ width: '320px', height: '320px' }}>
-            <ResponsiveContainer width={320} height={320}>
+        <div className="flex items-center justify-center gap-12">
+          {/* Donut Chart - Increased Size */}
+          <div className="relative w-96 h-96">
+            <ResponsiveContainer width={384} height={384}>
               <PieChart margin={{ top: 30, right: 80, bottom: 30, left: 80 }}>
                 <Pie
-                  data={data}
+                  data={[
+                    { name: "Product Development", value: 40, color: "#3B82F6" },
+                    { name: "Sales & Marketing", value: 35, color: "#10B981" },
+                    { name: "Operations", value: 15, color: "#F59E0B" },
+                    { name: "Working Capital", value: 10, color: "#EF4444" },
+                  ]}
                   cx="50%"
                   cy="50%"
-                  innerRadius={60}
-                  outerRadius={100}
+                  innerRadius={80}
+                  outerRadius={140}
                   paddingAngle={2}
                   dataKey="value"
-                  label={renderCustomizedLabel}
+                  // label={renderCustomizedLabel}
                 >
-                  {data.map((entry, index) => (
-                    <Cell key={`cell-${index}`} fill={entry.color} />
-                  ))}
+                  <Cell fill="#3B82F6" />
+                  <Cell fill="#10B981" />
+                  <Cell fill="#F59E0B" />
+                  <Cell fill="#EF4444" />
                 </Pie>
                 
                 <text
@@ -77,13 +85,29 @@ const Layout1Slide11 = () => {
                   textAnchor="middle"
                   dominantBaseline="middle"
                   className="text-xl font-semibold"
-                  fontSize={16}
+                  fontSize={18}
                   fontWeight={600}
                 >
                   $8M Series A
                 </text>
               </PieChart>
             </ResponsiveContainer>
+          </div>
+          
+          {/* Bullet Points with Matching Colors */}
+          <div className="w-80">
+            <div className="space-y-4">
+              {data.map((item, index) => (
+                <BulletPoint 
+                  key={index}
+                  title={`${item.name}: ${item.value}%`}
+                  description=""
+                  dotColor={item.color.replace('text-', '').replace('-500', '')}
+                  textColor={item.color}
+                  bgColor="text-gray-600"
+                />
+              ))}
+            </div>
           </div>
         </div>
       </div>

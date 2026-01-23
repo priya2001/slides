@@ -34,36 +34,39 @@ const Layout1Slide2 = () => {
   ];
 
   return (
-    <section className="w-[1280px] h-[720px] flex items-center justify-center relative overflow-hidden bg-gray-50">
+    // no scrolling container
+    <div className="w-[1280px] h-[720px] bg-gray-100 flex justify-center items-start overflow-hidden">
       
-      <div className="absolute top-8 left-8 z-10">
-        <LogoPlaceholder />
-      </div>
-      
-      
-      <div className="w-full max-w-6xl mx-auto px-8 z-10">
+      {/* fixed slide canvas */}
+      <section className="w-[1280px] h-[720px] bg-gray-50 relative overflow-hidden">
         
-        <Heading 
-          title="The Problem: Digital Workflow Inefficiencies"
-          size="xl"
-          titleColor="text-black"
-          className="mb-16 text-left"
-        />
-        
-        
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {problemCards.map((card, index) => (
-            <FeatureCard
-              key={index}
-              title={card.title}
-              description={card.description}
-              bgColor={card.bgColor}
-              icon={card.icon}
-            />
-          ))}
+        <div className="absolute top-8 left-8 z-10">
+          <LogoPlaceholder />
         </div>
-      </div>
-    </section>
+
+        <div className="px-12 pt-24">
+          <Heading 
+            title="The Problem: Digital Workflow Inefficiencies"
+            size="xl"
+            titleColor="text-black"
+            className="mb-16 text-left"
+          />
+
+          <div className="grid grid-cols-4 gap-6">
+            {problemCards.map((card, index) => (
+              <FeatureCard
+                key={index}
+                title={card.title}
+                description={card.description}
+                bgColor={card.bgColor}
+                icon={card.icon}
+              />
+            ))}
+          </div>
+        </div>
+
+      </section>
+    </div>
   );
 };
 

@@ -1,29 +1,14 @@
 'use client';
 
 import LogoPlaceholder from '../../components/LogoPlaceholder';
-import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
+import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend } from 'recharts';
 import Heading from '../../components/Heading';
 
 const Layout1Slide6 = () => {
   const marketMetrics = [
-    {
-      label: "TAM",
-      value: "$68B",
-      description: "Total global workflow automation market by 2028",
-      bgColor: "bg-blue-500"
-    },
-    {
-      label: "SAM", 
-      value: "$24B",
-      description: "Serviceable market in North America and Europe",
-      bgColor: "bg-blue-600"
-    },
-    {
-      label: "SOM",
-      value: "$1.2B",
-      description: "Serviceable obtainable market (5% market share)",
-      bgColor: "bg-blue-700"
-    }
+    { label: "TAM", value: "$68B", description: "Total global workflow automation market by 2028", bgColor: "bg-blue-500" },
+    { label: "SAM", value: "$24B", description: "Serviceable market in North America and Europe", bgColor: "bg-blue-600" },
+    { label: "SOM", value: "$1.2B", description: "Serviceable obtainable market (5% market share)", bgColor: "bg-blue-700" }
   ];
 
   const chartData = [
@@ -38,24 +23,25 @@ const Layout1Slide6 = () => {
 
   return (
     <section className="w-[1280px] h-[720px] flex items-center justify-center relative overflow-hidden bg-gray-50">
-     
+
       <div className="absolute top-8 left-8 z-10">
         <LogoPlaceholder />
       </div>
-    
-      <div className="w-full max-w-6xl mx-auto px-8 z-10">
-     
-        <Heading 
+
+      <div className="w-full h-full px-16 pt-24 z-10">
+
+        <Heading
           title="Market Sizing: $68B Opportunity"
           size="xl"
           titleColor="text-black"
           className="mb-12 text-left"
         />
-        
-        <div className="flex flex-col lg:flex-row items-center justify-between gap-12">
-          
-          <div className="w-full lg:w-1/2">
-            
+
+        {/* fixed layout */}
+        <div className="flex gap-10">
+
+          {/* Left: Metrics */}
+          <div className="w-[520px]">
             <div className="flex justify-between mb-8">
               {marketMetrics.map((metric, index) => (
                 <div key={index} className="text-center">
@@ -63,12 +49,11 @@ const Layout1Slide6 = () => {
                 </div>
               ))}
             </div>
-            
-           
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+
+            <div className="grid grid-cols-3 gap-4">
               {marketMetrics.map((metric, index) => (
-                <div 
-                  key={index} 
+                <div
+                  key={index}
                   className={`${metric.bgColor} rounded-xl p-6 flex flex-col items-center justify-center text-white h-40`}
                 >
                   <div className="text-2xl font-bold mb-2">{metric.value}</div>
@@ -77,47 +62,30 @@ const Layout1Slide6 = () => {
               ))}
             </div>
           </div>
-          
-          
-          <div className="w-full lg:w-1/2">
+
+          {/* Right: Chart */}
+          <div className="w-[640px]">
             <div className="bg-white p-6 rounded-2xl shadow-sm" style={{ height: '400px' }}>
-              <ResponsiveContainer width="100%" height={400}>
-                <BarChart
-                  data={chartData}
-                  margin={{
-                    top: 20,
-                    right: 30,
-                    left: 20,
-                    bottom: 20,
-                  }}
-                >
-                  <CartesianGrid strokeDasharray="3 3" stroke="#e5e7eb" />
-                  <XAxis 
-                    dataKey="year" 
-                    stroke="#6b7280"
-                    tick={{ fontSize: 12 }}
-                  />
-                  <YAxis 
-                    stroke="#6b7280"
-                    tick={{ fontSize: 12 }}
-                    tickFormatter={(value) => `$${value}B`}
-                  />
-                  <Tooltip 
-                    formatter={(value) => [`$${value}B`, 'Market Size']}
-                    labelFormatter={(label) => `Year: ${label}`}
-                    contentStyle={{ borderRadius: '0.5rem' }}
-                  />
-                  <Legend />
-                  <Bar 
-                    dataKey="marketSize" 
-                    fill="#8b5cf6" 
-                    radius={[4, 4, 0, 0]} 
-                    name="Market Size ($B)"
-                  />
-                </BarChart>
-              </ResponsiveContainer>
+              <BarChart
+                width={600}
+                height={360}
+                data={chartData}
+                margin={{ top: 20, right: 30, left: 20, bottom: 20 }}
+              >
+                <CartesianGrid strokeDasharray="3 3" stroke="#e5e7eb" />
+                <XAxis dataKey="year" stroke="#6b7280" tick={{ fontSize: 12 }} />
+                <YAxis stroke="#6b7280" tick={{ fontSize: 12 }} tickFormatter={(value) => `$${value}B`} />
+                <Tooltip
+                  formatter={(value) => [`$${value}B`, 'Market Size']}
+                  labelFormatter={(label) => `Year: ${label}`}
+                  contentStyle={{ borderRadius: '0.5rem' }}
+                />
+                <Legend />
+                <Bar dataKey="marketSize" fill="#8b5cf6" radius={[4, 4, 0, 0]} name="Market Size ($B)" />
+              </BarChart>
             </div>
           </div>
+
         </div>
       </div>
     </section>

@@ -1,3 +1,5 @@
+'use client';
+
 import LogoPlaceholder from '../../components/LogoPlaceholder';
 import FeatureCard from '../../components/FeatureCard';
 import Heading from '../../components/Heading';
@@ -36,25 +38,23 @@ const Layout1Slide8 = () => {
 
   return (
     <section className="w-[1280px] h-[720px] flex items-center justify-center relative overflow-hidden bg-gray-50">
-      
+
       <div className="absolute top-8 left-8 z-10">
         <LogoPlaceholder />
       </div>
-      
-     
-      <div className="w-full max-w-6xl mx-auto px-8 z-10">
-        
+
+      <div className="w-full h-full px-16 pt-24 z-10">
+
         <Heading 
           title="Scalable Business Model"
           size="xl"
           titleColor="text-black"
           subtitle="Multiple revenue streams with high recurring revenue and expanding customer value."
           subtitleColor="text-gray-500"
-          className="mb-12"
+          className="mb-12 text-left"
         />
-        
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+        <div className="grid grid-cols-4 gap-6">
           {businessModels.map((model, index) => (
             <FeatureCard
               key={index}
@@ -67,6 +67,7 @@ const Layout1Slide8 = () => {
             />
           ))}
         </div>
+
       </div>
     </section>
   );

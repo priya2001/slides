@@ -25,48 +25,56 @@ const Layout1Slide3 = () => {
   ];
 
   return (
-    <section className="w-[1280px] h-[720px] flex items-center justify-center relative overflow-hidden bg-gray-50">
+    <div className="w-[1280px] h-[720px] bg-gray-100 flex justify-center items-start overflow-hidden">
       
-      <div className="absolute top-8 left-8 z-10">
-        <LogoPlaceholder />
-      </div>
-      
-     
-      <div className="w-full max-w-6xl mx-auto px-8 z-10">
-        <div className="flex flex-col lg:flex-row items-center justify-between gap-12">
-          
-          <div className="w-full lg:w-1/2">
-            <Heading 
-              title="Our Solution: Unified Workflow Platform"
-              size="xl"
-              titleColor="text-black"
-              className="mb-10 text-left"
-            />
+      {/* Fixed slide canvas */}
+      <section className="w-[1280px] h-[720px] bg-gray-50 relative overflow-hidden">
+        
+        {/* Logo */}
+        <div className="absolute top-8 left-8 z-10">
+          <LogoPlaceholder />
+        </div>
+
+        {/* Content */}
+        <div className="px-12 pt-24 h-full">
+          <div className="flex flex-row items-center justify-between gap-16 h-full">
             
-            <div className="space-y-0">
-              {bulletPoints.map((point, index) => (
-                <BulletPoint
-                  key={index}
-                  title={point.title}
-                  description={point.description}
-                  textColor="text-black"
-                  bgColor="text-gray-600"
-                />
-              ))}
+            {/* Left content */}
+            <div className="w-1/2">
+              <Heading 
+                title="Our Solution: Unified Workflow Platform"
+                size="xl"
+                titleColor="text-black"
+                className="mb-10 text-left"
+              />
+
+              <div className="space-y-2">
+                {bulletPoints.map((point, index) => (
+                  <BulletPoint
+                    key={index}
+                    title={point.title}
+                    description={point.description}
+                    textColor="text-black"
+                    bgColor="text-gray-600"
+                  />
+                ))}
+              </div>
             </div>
-          </div>
-          
-         
-          <div className="w-full lg:w-1/2 flex justify-center">
-            <img 
-              src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" 
-              alt="Business dashboard with analytics and workflow visualization"
-              className="rounded-2xl shadow-sm w-full h-96 object-cover"
-            />
+
+            {/* Right image */}
+            <div className="w-1/2 flex justify-center items-center">
+              <img 
+                src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=2070&q=80" 
+                alt="Business dashboard with analytics and workflow visualization"
+                className="w-[520px] h-[360px] object-cover rounded-2xl shadow-sm"
+              />
+            </div>
+
           </div>
         </div>
-      </div>
-    </section>
+
+      </section>
+    </div>
   );
 };
 
