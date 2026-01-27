@@ -1,355 +1,350 @@
 {
-    "layout": "layout1",
-    "common": {
-      "dimensions": {
-        "width": 1280,
-        "height": 720
-      },
-      "background": "bg-gray-50",
-      "logo": {
-        "enabled": true,
-        "position": {
-          "top": 8,
-          "left": 8
-        }
-      },
+  "slides": [
+    {
+      "id": 1,
+      "title": "TechFlow Solutions",
+      "subtitle": "Innovative software solutions for modern businesses",
+      "type": "title",
       "content": {
-        "alignment": "center",
-        "maxWidth": "max-w-4xl",
-        "padding": "px-8"
+        "description": "Transforming digital workflows with cutting-edge technology"
       }
     },
-    "slides": [
-      {
-        "id": 1,
-        "title": "WoodScale: Revolutionizing Timber Measurement",
-        "subtitle": "AI-Powered Precision for the Modern Forestry Industry",
-        "type": "title",
-        "content": {
-          "main_text": "Transforming traditional forestry with cutting-edge computer vision technology",
-          "highlights": [
-            "Precision measurement using smartphone cameras",
-            "AI-powered analysis for accuracy",
-            "Real-time data processing and insights"
-          ]
-        }
-      },
-      {
-        "id": 2,
-        "title": "The Problem: Digital Workflow Inefficiencies",
-        "subtitle": "",
-        "type": "problem",
-        "content": {
-          "cards": [
-            {
-              "title": "Fragmented Systems",
-              "description": "85% of businesses use 10+ disconnected tools, leading to data silos and inefficiency.",
-              "bgColor": "bg-green-50",
-              "icon": "Database"
-            },
-            {
-              "title": "Manual Processes",
-              "description": "Employees spend 40% of their time on repetitive tasks that could be automated.",
-              "bgColor": "bg-purple-50",
-              "icon": "Activity"
-            },
-            {
-              "title": "Poor Integration",
-              "description": "60% of businesses struggle with data sync issues between different platforms.",
-              "bgColor": "bg-yellow-50",
-              "icon": "Zap"
-            },
-            {
-              "title": "Productivity Loss",
-              "description": "Companies lose $37B annually due to poor workflow management and inefficient processes.",
-              "bgColor": "bg-pink-50",
-              "icon": "TrendingDown"
-            }
-          ]
-        }
-      },
-      {
-        "id": 3,
-        "title": "Our Solution: WoodScale AI Platform",
-        "subtitle": "Transforming timber measurement with cutting-edge computer vision",
-        "type": "solution",
-        "content": {
-          "features": [
-            {
-              "title": "Precision Measurement",
-              "description": "Accurate diameter, height, and volume calculations using advanced AI algorithms",
-              "bgColor": "bg-blue-50",
-              "icon": "Ruler"
-            },
-            {
-              "title": "Real-time Processing",
-              "description": "Instant results delivered directly to your device with no waiting",
-              "bgColor": "bg-indigo-50",
-              "icon": "Zap"
-            },
-            {
-              "title": "Cloud Analytics",
-              "description": "Comprehensive data visualization and trend analysis tools",
-              "bgColor": "bg-purple-50",
-              "icon": "BarChart3"
-            },
-            {
-              "title": "Team Collaboration",
-              "description": "Seamless sharing and coordination across your entire organization",
-              "bgColor": "bg-violet-50",
-              "icon": "Users"
-            }
-          ]
-        }
-      },
-      {
-        "id": 4,
-        "title": "Meet Our Team",
-        "subtitle": "Experts in forestry, AI, and business innovation",
-        "type": "team",
-        "content": {
-          "members": [
-            {
-              "name": "Sarah Johnson",
-              "role": "CEO & Co-founder",
-              "bio": "Former forestry engineer with 15+ years in timber industry",
-              "image": "sarah.jpg"
-            },
-            {
-              "name": "Michael Chen",
-              "role": "CTO & Co-founder", 
-              "bio": "AI researcher from Stanford, specializing in computer vision",
-              "image": "michael.jpg"
-            },
-            {
-              "name": "David Rodriguez",
-              "role": "Head of Operations",
-              "bio": "Supply chain expert from major forestry corporation",
-              "image": "david.jpg"
-            },
-            {
-              "name": "Emma Thompson",
-              "role": "Lead Developer",
-              "bio": "Full-stack engineer with expertise in mobile applications",
-              "image": "emma.jpg"
-            }
-          ]
-        }
-      },
-      {
-        "id": 5,
-        "title": "Market Opportunity",
-        "subtitle": "The $45B timber measurement market awaits digital transformation",
-        "type": "market-opportunity",
-        "content": {
-          "points": [
-            "Global timber market valued at $485B with 5.2% annual growth",
-            "Digital forestry solutions market growing at 18% CAGR",
-            "Regulatory pressure driving demand for accurate measurement",
-            "Labor shortage creating need for efficient measurement tools"
-          ]
-        }
-      },
-      {
-        "id": 6,
-        "title": "Market Sizing: $68B Opportunity",
-        "subtitle": "",
-        "type": "market-sizing",
-        "content": {
-          "metrics": [
-            {
-              "label": "TAM",
-              "value": "$68B",
-              "description": "Total global workflow automation market by 2028",
-              "bgColor": "bg-blue-500"
-            },
-            {
-              "label": "SAM", 
-              "value": "$24B",
-              "description": "Serviceable market in North America and Europe",
-              "bgColor": "bg-blue-600"
-            },
-            {
-              "label": "SOM",
-              "value": "$1.2B",
-              "description": "Serviceable obtainable market (5% market share)",
-              "bgColor": "bg-blue-700"
-            }
-          ],
-          "chartData": [
-            { "year": "2024", "marketSize": 12 },
-            { "year": "2025", "marketSize": 18 },
-            { "year": "2026", "marketSize": 24 },
-            { "year": "2027", "marketSize": 34 },
-            { "year": "2028", "marketSize": 48 }
-          ]
-        }
-      },
-      {
-        "id": 7,
-        "title": "Product Demo",
-        "subtitle": "Experience the WoodScale difference in 3 simple steps",
-        "type": "demo",
-        "content": {
-          "steps": [
-            {
-              "step": 1,
-              "title": "Scan Tree Trunk",
-              "description": "Position your device and capture the tree from multiple angles"
-            },
-            {
-              "step": 2,
-              "title": "AI Processing",
-              "description": "Our algorithms analyze the images and calculate precise measurements"
-            },
-            {
-              "step": 3,
-              "title": "Results & Analytics",
-              "description": "View detailed measurements and export to your forestry management system"
-            }
-          ]
-        }
-      },
-      {
-        "id": 8,
-        "title": "Business Model",
-        "subtitle": "Sustainable revenue streams with high margins",
-        "type": "business-model",
-        "content": {
-          "models": [
-            {
-              "title": "Software Licensing",
-              "description": "Monthly subscriptions for access to WoodScale platform",
-              "percentage": 60
-            },
-            {
-              "title": "Premium Services",
-              "description": "Custom integrations and advanced analytics packages",
-              "percentage": 25
-            },
-            {
-              "title": "Data Insights",
-              "description": "Anonymized market intelligence for forestry industry players",
-              "percentage": 15
-            }
-          ]
-        }
-      },
-      {
-        "id": 9,
-        "title": "Traction & Growth",
-        "subtitle": "Impressive early adoption and market validation",
-        "type": "traction",
-        "content": {
-          "metrics": [
-            {
-              "title": "Active Users",
-              "value": "2,400+",
-              "change": "+180%",
-              "description": "Monthly active users across pilot programs"
-            },
-            {
-              "title": "Trees Measured",
-              "value": "1.2M+",
-              "change": "+320%",
-              "description": "Total trees measured using our platform"
-            },
-            {
-              "title": "Customer Satisfaction",
-              "value": "94%",
-              "change": "+12%",
-              "description": "Net Promoter Score from satisfied customers"
-            },
-            {
-              "title": "Partnerships",
-              "value": "47",
-              "change": "+85%",
-              "description": "Strategic partnerships with forestry companies"
-            }
-          ]
-        }
-      },
-      {
-        "id": 10,
-        "title": "Competitive Analysis",
-        "subtitle": "WoodScale's unique advantages in the market",
-        "type": "competition",
-        "content": {
-          "matrix": [
-            {
-              "feature": "Measurement Accuracy",
-              "woodscale": "99.2%",
-              "competitor_a": "85%",
-              "competitor_b": "92%"
-            },
-            {
-              "feature": "Processing Speed",
-              "woodscale": "Seconds",
-              "competitor_a": "Minutes",
-              "competitor_b": "Minutes"
-            },
-            {
-              "feature": "Device Compatibility",
-              "woodscale": "Universal",
-              "competitor_a": "Limited",
-              "competitor_b": "Moderate"
-            },
-            {
-              "feature": "Pricing Model",
-              "woodscale": "Affordable SaaS",
-              "competitor_a": "High Upfront",
-              "competitor_b": "Moderate SaaS"
-            }
-          ]
-        }
-      },
-      {
-        "id": 11,
-        "title": "The Ask: $8M Series A",
-        "subtitle": "We're raising $8M to accelerate product development, expand our sales team, and capture market share in the growing workflow automation space.",
-        "type": "funding",
-        "content": {
-          "allocation": [
-            {
-              "name": "Product Development",
-              "value": 40,
-              "color": "#3B82F6"
-            },
-            {
-              "name": "Sales & Marketing", 
-              "value": 35,
-              "color": "#10B981"
-            },
-            {
-              "name": "Operations",
-              "value": 15,
-              "color": "#F59E0B"
-            },
-            {
-              "name": "Working Capital",
-              "value": 10,
-              "color": "#EF4444"
-            }
-          ],
-          "projections": {
-            "year1_revenue": "$8M",
-            "year3_revenue": "$32M",
-            "market_share": "5-8%"
+    {
+      "id": 2,
+      "title": "The Problem: Digital Workflow Inefficiencies",
+      "subtitle": "",
+      "type": "problem",
+      "content": {
+        "cards": [
+          {
+            "title": "Fragmented Systems",
+            "description": "85% of businesses use 10+ disconnected tools, leading to data silos and inefficiency.",
+            "bgColor": "bg-green-50",
+            "icon": "Database"
+          },
+          {
+            "title": "Manual Processes",
+            "description": "Employees spend 40% of their time on repetitive tasks that could be automated.",
+            "bgColor": "bg-purple-50",
+            "icon": "Activity"
+          },
+          {
+            "title": "Poor Integration",
+            "description": "60% of businesses struggle with data sync issues between different platforms.",
+            "bgColor": "bg-yellow-50",
+            "icon": "Zap"
+          },
+          {
+            "title": "Productivity Loss",
+            "description": "Companies lose $37B annually due to poor workflow management and inefficient processes.",
+            "bgColor": "bg-pink-50",
+            "icon": "TrendingDown"
           }
-        }
-      },
-      {
-        "id": 12,
-        "title": "Thank You",
-        "subtitle": "Ready to revolutionize the timber industry together?",
-        "type": "thank-you",
-        "content": {
-          "contact": {
-            "email": "hello@woodscale.com",
-            "phone": "+1 (555) 123-4567",
-            "website": "www.woodscale.com"
+        ]
+      }
+    },
+    {
+      "id": 3,
+      "title": "Our Solution: Unified Workflow Platform",
+      "subtitle": "",
+      "type": "solution",
+      "content": {
+        "bulletPoints": [
+          {
+            "title": "All-in-One Platform",
+            "description": "Single dashboard that connects all your business tools and data sources"
+          },
+          {
+            "title": "AI-Powered Automation",
+            "description": "Intelligent workflows that learn and adapt to your business processes"
+          },
+          {
+            "title": "Real-time Analytics",
+            "description": "Actionable insights and performance metrics across all departments"
+          },
+          {
+            "title": "Seamless Integration",
+            "description": "200+ pre-built integrations with popular business tools and APIs"
           }
+        ],
+        "image": {
+          "src": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=2070&q=80",
+          "alt": "Business dashboard with analytics and workflow visualization",
+          "className": "w-[520px] h-[360px] object-cover rounded-2xl shadow-sm"
         }
       }
-    ]
-  }
+    },
+    {
+      "id": 4,
+      "title": "Our Experienced Team",
+      "subtitle": "",
+      "type": "team",
+      "content": {
+        "members": [
+          {
+            "name": "David Johnson",
+            "role": "CEO & Founder",
+            "description": "Former VP of Engineering at Microsoft with 15 years in enterprise software",
+            "bgColor": "bg-green-50"
+          },
+          {
+            "name": "Lisa Chen",
+            "role": "CTO",
+            "description": "Ex-Google senior engineer specializing in distributed systems and AI",
+            "bgColor": "bg-purple-50"
+          },
+          {
+            "name": "Robert Kim",
+            "role": "Head of Product",
+            "description": "Previously led product at Salesforce, expert in enterprise UX design",
+            "bgColor": "bg-yellow-50"
+          },
+          {
+            "name": "Maria Santos",
+            "role": "VP of Sales",
+            "description": "15+ years in B2B sales, previously grew revenue 500% at enterprise SaaS startup",
+            "bgColor": "bg-pink-50"
+          }
+        ]
+      }
+    },
+    {
+      "id": 5,
+      "title": "Massive Market Opportunity",
+      "subtitle": "The workflow automation market is experiencing explosive growth driven by digital transformation initiatives.",
+      "type": "market-opportunity",
+      "content": {
+        "statCards": [
+          {
+            "metric": "$68B Market",
+            "subtitle": "Total Addressable Market",
+            "description": "Global workflow automation market expected to reach $68B by 2028, growing at 23% CAGR.",
+            "bgColor": "bg-green-50"
+          },
+          {
+            "metric": "500M+ Users",
+            "subtitle": "Potential User Base",
+            "description": "Over 500 million knowledge workers globally who could benefit from workflow automation.",
+            "bgColor": "bg-purple-50"
+          },
+          {
+            "metric": "85% Adoption",
+            "subtitle": "Enterprise Demand",
+            "description": "85% of enterprises plan to increase workflow automation spending in the next 2 years.",
+            "bgColor": "bg-yellow-50"
+          },
+          {
+            "metric": "$2.4M Average",
+            "subtitle": "Annual Savings",
+            "description": "Average enterprise saves $2.4M annually by implementing comprehensive workflow automation.",
+            "bgColor": "bg-pink-50"
+          }
+        ]
+      }
+    },
+    {
+      "id": 6,
+      "title": "Market Sizing: $68B Opportunity",
+      "subtitle": "",
+      "type": "market-sizing",
+      "content": {
+        "marketMetrics": [
+          {
+            "label": "TAM",
+            "value": "$68B",
+            "description": "Total global workflow automation market by 2028",
+            "bgColor": "bg-blue-500"
+          },
+          {
+            "label": "SAM",
+            "value": "$24B",
+            "description": "Serviceable market in North America and Europe",
+            "bgColor": "bg-blue-600"
+          },
+          {
+            "label": "SOM",
+            "value": "$1.2B",
+            "description": "Serviceable obtainable market (5% market share)",
+            "bgColor": "bg-blue-700"
+          }
+        ],
+        "chartData": [
+          { "year": "2022", "marketSize": 28 },
+          { "year": "2023", "marketSize": 35 },
+          { "year": "2024", "marketSize": 43 },
+          { "year": "2025", "marketSize": 53 },
+          { "year": "2026", "marketSize": 61 },
+          { "year": "2027", "marketSize": 65 },
+          { "year": "2028", "marketSize": 68 }
+        ]
+      }
+    },
+    {
+      "id": 7,
+      "title": "Product Demo",
+      "subtitle": "",
+      "type": "demo",
+      "content": {
+        "image": {
+          "src": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+          "alt": "Analytics dashboard with charts and metrics",
+          "className": "rounded-2xl w-full max-w-2xl h-auto"
+        }
+      }
+    },
+    {
+      "id": 8,
+      "title": "Scalable Business Model",
+      "subtitle": "Multiple revenue streams with high recurring revenue and expanding customer value.",
+      "type": "business-model",
+      "content": {
+        "businessModels": [
+          {
+            "title": "SaaS Subscriptions",
+            "subtitle": "Recurring Revenue",
+            "description": "$50–500/month per user with 95% gross margins. Tiered pricing based on features and usage.",
+            "bgColor": "bg-emerald-50",
+            "borderColor": "border-emerald-200"
+          },
+          {
+            "title": "Enterprise Licenses",
+            "subtitle": "High-Value Contracts",
+            "description": "$50K–500K annual contracts for large organizations with custom implementations.",
+            "bgColor": "bg-violet-50",
+            "borderColor": "border-violet-200"
+          },
+          {
+            "title": "Professional Services",
+            "subtitle": "Implementation Support",
+            "description": "Custom integrations, training, and consulting services with 70% gross margins.",
+            "bgColor": "bg-pink-50",
+            "borderColor": "border-pink-200"
+          },
+          {
+            "title": "Marketplace Revenue",
+            "subtitle": "Partner Ecosystem",
+            "description": "30% revenue share from third-party integrations and add-ons sold through our platform.",
+            "bgColor": "bg-blue-50",
+            "borderColor": "border-blue-200"
+          }
+        ]
+      }
+    },
+    {
+      "id": 9,
+      "title": "Strong Traction & Growth",
+      "subtitle": "Consistent growth metrics with strong unit economics and customer satisfaction.",
+      "type": "traction",
+      "content": {
+        "metrics": [
+          {
+            "metric": "$4.2M",
+            "title": "Annual Recurring Revenue",
+            "description": "285% YoY growth",
+            "bgColor": "bg-violet-50"
+          },
+          {
+            "metric": "850+",
+            "title": "Active Customers",
+            "description": "20% month-over-month growth",
+            "bgColor": "bg-emerald-50"
+          },
+          {
+            "metric": "94%",
+            "title": "Customer Retention",
+            "description": "industry-leading retention",
+            "bgColor": "bg-rose-50"
+          },
+          {
+            "metric": "$180K",
+            "title": "Average Contract Value",
+            "description": "growing 15% annually",
+            "bgColor": "bg-orange-50"
+          }
+        ]
+      }
+    },
+    {
+      "id": 10,
+      "title": "Competitive Analysis",
+      "subtitle": "TechFlow Solutions offers superior integration capabilities and AI-powered automation compared to existing solutions.",
+      "type": "competition",
+      "content": {
+        "features": [
+          "AI Automation",
+          "200+ Integrations",
+          "Real-time Analytics",
+          "Custom Workflows",
+          "Enterprise Security",
+          "Mobile App"
+        ],
+        "competitors": [
+          {
+            "name": "TechFlow Solutions",
+            "isPrimary": true,
+            "features": [true, true, true, true, true, true]
+          },
+          {
+            "name": "Zapier",
+            "features": [false, true, false, false, false, true]
+          },
+          {
+            "name": "Microsoft Power Automate",
+            "features": [false, true, true, true, true, false]
+          },
+          {
+            "name": "Workato",
+            "features": [false, true, true, true, true, true]
+          }
+        ]
+      }
+    },
+    {
+      "id": 11,
+      "title": "The Ask: $8M Series A",
+      "subtitle": "We're raising $8M to accelerate product development, expand our sales team, and capture market share in the growing workflow automation space.",
+      "type": "funding",
+      "content": {
+        "allocation": [
+          {
+            "name": "Product Development",
+            "value": 40,
+            "color": "text-blue-500"
+          },
+          {
+            "name": "Sales & Marketing",
+            "value": 35,
+            "color": "text-green-500"
+          },
+          {
+            "name": "Operations",
+            "value": 15,
+            "color": "text-orange-500"
+          },
+          {
+            "name": "Working Capital",
+            "value": 10,
+            "color": "text-red-500"
+          }
+        ]
+      }
+    },
+    {
+      "id": 12,
+      "title": "Thank You",
+      "subtitle": "Let's Transform Workflows Together",
+      "type": "thank-you",
+      "content": {
+        "contact": {
+          "title": "Get in Touch",
+          "items": [
+            "david.johnson@techflowsolutions.com",
+            "+1 (555) 987-6543",
+            "www.techflowsolutions.com"
+          ]
+        },
+        "footer": "Series A Pitch - December 2024"
+      }
+    }
+  ]
+}

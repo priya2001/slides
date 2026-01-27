@@ -4,34 +4,31 @@ import LogoPlaceholder from '../../components/LogoPlaceholder';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend } from 'recharts';
 import Heading from '../../components/Heading';
 
-const Layout1Slide6 = () => {
-  const marketMetrics = [
-    { label: "TAM", value: "$68B", description: "Total global workflow automation market by 2028", bgColor: "bg-blue-500" },
-    { label: "SAM", value: "$24B", description: "Serviceable market in North America and Europe", bgColor: "bg-blue-600" },
-    { label: "SOM", value: "$1.2B", description: "Serviceable obtainable market (5% market share)", bgColor: "bg-blue-700" }
-  ];
+// Import slide data
+import slideData from '../../../file.json';
 
-  const chartData = [
-    { year: '2022', marketSize: 28 },
-    { year: '2023', marketSize: 35 },
-    { year: '2024', marketSize: 43 },
-    { year: '2025', marketSize: 53 },
-    { year: '2026', marketSize: 61 },
-    { year: '2027', marketSize: 65 },
-    { year: '2028', marketSize: 68 },
-  ];
+const Layout1Slide6 = () => {
+  // Get data for slide 6
+  const slide = slideData.slides.find(s => s.id === 6);
+  
+  if (!slide) {
+    return <div>Slide data not found</div>;
+  }
+
+  const chartData = slide.content?.chartData || [];
 
   return (
     <section className="w-[1280px] h-[720px] flex items-center justify-center relative overflow-hidden bg-gray-50">
-
+     
       <div className="absolute top-8 left-8 z-10">
         <LogoPlaceholder />
       </div>
-
+      
+      
       <div className="w-full h-full px-16 pt-24 z-10">
-
+        
         <Heading
-          title="Market Sizing: $68B Opportunity"
+          title={slide.title}
           size="xl"
           titleColor="text-black"
           className="mb-12 text-left"
@@ -43,7 +40,7 @@ const Layout1Slide6 = () => {
           {/* Left: Metrics */}
           <div className="w-[520px]">
             <div className="flex justify-between mb-8">
-              {marketMetrics.map((metric, index) => (
+              {slide.content?.marketMetrics?.map((metric: any, index: number) => (
                 <div key={index} className="text-center">
                   <span className="text-sm font-medium text-gray-500">{metric.label}</span>
                 </div>
@@ -51,7 +48,7 @@ const Layout1Slide6 = () => {
             </div>
 
             <div className="grid grid-cols-3 gap-4">
-              {marketMetrics.map((metric, index) => (
+              {slide.content?.marketMetrics?.map((metric: any, index: number) => (
                 <div
                   key={index}
                   className={`${metric.bgColor} rounded-xl p-6 flex flex-col items-center justify-center text-white h-40`}

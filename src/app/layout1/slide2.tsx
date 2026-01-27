@@ -5,33 +5,32 @@ import FeatureCard from '../../components/FeatureCard';
 import { Database, Activity, Zap, TrendingDown } from 'lucide-react';
 import Heading from '../../components/Heading';
 
+// Import slide data
+import slideData from '../../../file.json';
+
 const Layout1Slide2 = () => {
-  const problemCards = [
-    {
-      title: "Fragmented Systems",
-      description: "85% of businesses use 10+ disconnected tools, leading to data silos and inefficiency.",
-      bgColor: "bg-green-50",
-      icon: <Database className="w-8 h-8 text-gray-400" />
-    },
-    {
-      title: "Manual Processes",
-      description: "Employees spend 40% of their time on repetitive tasks that could be automated.",
-      bgColor: "bg-purple-50",
-      icon: <Activity className="w-8 h-8 text-gray-400" />
-    },
-    {
-      title: "Poor Integration",
-      description: "60% of businesses struggle with data sync issues between different platforms.",
-      bgColor: "bg-yellow-50",
-      icon: <Zap className="w-8 h-8 text-gray-400" />
-    },
-    {
-      title: "Productivity Loss",
-      description: "Companies lose $37B annually due to poor workflow management and inefficient processes.",
-      bgColor: "bg-pink-50",
-      icon: <TrendingDown className="w-8 h-8 text-gray-400" />
+  // Get data for slide 2
+  const slide = slideData.slides.find(s => s.id === 2);
+  
+  if (!slide) {
+    return <div>Slide data not found</div>;
+  }
+
+  // Map icons to Lucide components
+  const getIcon = (iconName: string) => {
+    switch(iconName.toLowerCase()) {
+      case 'database':
+        return <Database className="w-8 h-8 text-gray-400" />;
+      case 'activity':
+        return <Activity className="w-8 h-8 text-gray-400" />;
+      case 'zap':
+        return <Zap className="w-8 h-8 text-gray-400" />;
+      case 'trendingdown':
+        return <TrendingDown className="w-8 h-8 text-gray-400" />;
+      default:
+        return <Database className="w-8 h-8 text-gray-400" />;
     }
-  ];
+  };
 
   return (
     // no scrolling container
@@ -43,23 +42,24 @@ const Layout1Slide2 = () => {
         <div className="absolute top-8 left-8 z-10">
           <LogoPlaceholder />
         </div>
-
+        
+        
         <div className="px-12 pt-24">
           <Heading 
-            title="The Problem: Digital Workflow Inefficiencies"
+            title={slide.title}
             size="xl"
             titleColor="text-black"
             className="mb-16 text-left"
           />
 
           <div className="grid grid-cols-4 gap-6">
-            {problemCards.map((card, index) => (
+            {slide.content?.cards?.map((card: any, index: number) => (
               <FeatureCard
                 key={index}
                 title={card.title}
                 description={card.description}
                 bgColor={card.bgColor}
-                icon={card.icon}
+                icon={getIcon(card.icon)}
               />
             ))}
           </div>

@@ -2,35 +2,16 @@ import LogoPlaceholder from '../../components/LogoPlaceholder';
 import ComparisonTable from '../../components/ComparisonTable';
 import Heading from '../../components/Heading';
 
-const Layout1Slide10 = () => {
-  const features = [
-    "AI Automation",
-    "200+ Integrations", 
-    "Real-time Analytics",
-    "Custom Workflows",
-    "Enterprise Security",
-    "Mobile App"
-  ];
+// Import slide data
+import slideData from '../../../file.json';
 
-  const competitors = [
-    {
-      name: "TechFlow Solutions",
-      isPrimary: true,
-      features: [true, true, true, true, true, true]
-    },
-    {
-      name: "Zapier",
-      features: [false, true, false, false, false, true]
-    },
-    {
-      name: "Microsoft Power Automate",
-      features: [false, true, true, true, true, false]
-    },
-    {
-      name: "Workato",
-      features: [false, true, true, true, true, true]
-    }
-  ];
+const Layout1Slide10 = () => {
+  // Get data for slide 10
+  const slide = slideData.slides.find(s => s.id === 10);
+  
+  if (!slide) {
+    return <div>Slide data not found</div>;
+  }
 
   return (
     <section className="w-[1280px] h-[720px] flex items-center justify-center relative overflow-hidden bg-gray-50">
@@ -41,19 +22,19 @@ const Layout1Slide10 = () => {
       
       
       <div className="w-full max-w-6xl mx-auto px-8 z-10">
-    
+        
         <Heading 
-          title="Competitive Analysis"
+          title={slide.title}
           size="xl"
           titleColor="text-black"
-          subtitle="TechFlow Solutions offers superior integration capabilities and AI-powered automation compared to existing solutions."
+          subtitle={slide.subtitle}
           subtitleColor="text-gray-600"
           className="mb-4"
         />
         
         
         <div className="bg-white rounded-2xl shadow-sm p-1">
-          <ComparisonTable features={features} competitors={competitors} />
+          <ComparisonTable features={slide.content?.features || []} competitors={slide.content?.competitors || []} />
         </div>
       </div>
     </section>

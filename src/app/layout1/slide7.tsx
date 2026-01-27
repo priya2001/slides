@@ -3,7 +3,17 @@
 import LogoPlaceholder from '../../components/LogoPlaceholder';
 import Heading from '../../components/Heading';
 
+// Import slide data
+import slideData from '../../../file.json';
+
 const Layout1Slide7 = () => {
+  // Get data for slide 7
+  const slide = slideData.slides.find(s => s.id === 7);
+  
+  if (!slide) {
+    return <div>Slide data not found</div>;
+  }
+
   return (
     <section className="w-[1280px] h-[720px] flex items-center justify-center relative overflow-hidden bg-gray-50">
       
@@ -13,9 +23,9 @@ const Layout1Slide7 = () => {
       
       
       <div className="w-full max-w-6xl mx-auto px-8 z-10">
-      
+        
         <Heading 
-          title="Product Demo"
+          title={slide.title}
           size="xl"
           titleColor="text-black"
           className="text-center mb-12"
@@ -24,9 +34,9 @@ const Layout1Slide7 = () => {
         
         <div className="flex justify-center">
           <img 
-            src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" 
-            alt="Analytics dashboard with charts and metrics"
-            className="rounded-2xl w-full max-w-2xl h-auto"
+            src={slide.content?.image?.src}
+            alt={slide.content?.image?.alt}
+            className={slide.content?.image?.className}
           />
         </div>
       </div>
